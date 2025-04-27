@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冥想内容智能搜索</title>
+    <link rel="stylesheet" href="meditation-search.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>冥想内容智能搜索</h1>
+            <p>基于语义理解的冥想课程搜索引擎</p>
+        </header>
+        
+        <main>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索冥想课程、关键词或描述...">
+                    <button id="search-button">搜索</button>
+                </div>
+                
+                <div id="search-suggestions" class="search-suggestions"></div>
+                
+                <div class="search-options">
+                    <label>
+                        <input type="checkbox" id="semantic-search" checked>
+                        语义搜索
+                    </label>
+                    <label>
+                        <input type="checkbox" id="fuzzy-match" checked>
+                        模糊匹配
+                    </label>
+                    <label>
+                        <input type="checkbox" id="highlight-matches" checked>
+                        高亮显示
+                    </label>
+                </div>
+            </div>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="search-tab">搜索结果</div>
+                <div class="tab" data-tab="history-tab">搜索历史</div>
+                <div class="tab" data-tab="features-tab">功能特点</div>
+            </div>
+            
+            <div id="search-tab" class="tab-content active">
+                <div id="loading-indicator" class="loading-indicator">
+                    <div class="spinner"></div>
+                    <p>正在搜索...</p>
+                </div>
+                
+                <div id="search-insights" class="search-insights"></div>
+                
+                <div id="search-results" class="search-results">
+                    <div class="welcome-message">
+                        <h2>欢迎使用冥想内容智能搜索</h2>
+                        <p>输入关键词开始搜索冥想课程</p>
+                        <ul>
+                            <li>尝试搜索 <strong>正念</strong>、<strong>呼吸</strong> 或 <strong>睡眠</strong></li>
+                            <li>使用语义搜索找到更多相关内容</li>
+                            <li>查看搜索洞察了解更多相关概念</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="history-tab" class="tab-content">
+                <h2>搜索历史</h2>
+                <div id="history-items" class="history-items"></div>
+            </div>
+            
+            <div id="features-tab" class="tab-content">
+                <h2>功能特点</h2>
+                <ul>
+                    <li><strong>语义搜索</strong> - 基于同义词和相关概念的语义理解，找到更多相关内容</li>
+                    <li><strong>智能权重</strong> - 标题匹配权重最高，其次是关键词，然后是描述</li>
+                    <li><strong>模糊匹配</strong> - 支持模糊匹配和分词搜索，提高搜索结果的相关性</li>
+                    <li><strong>搜索建议</strong> - 实时提供搜索建议，包括历史搜索和相关概念</li>
+                    <li><strong>搜索洞察</strong> - 提供搜索结果的分类统计和相关概念分析</li>
+                    <li><strong>高亮显示</strong> - 在搜索结果中高亮显示直接匹配和语义匹配的关键词</li>
+                    <li><strong>搜索历史</strong> - 记录和显示用户的搜索历史，方便重复搜索</li>
+                    <li><strong>可配置选项</strong> - 用户可以启用/禁用语义搜索、模糊匹配和高亮显示</li>
+                    <li><strong>结果评分</strong> - 显示搜索结果的相关度评分和匹配类型</li>
+                    <li><strong>响应式设计</strong> - 适应各种设备的屏幕尺寸</li>
+                </ul>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 冥想内容智能搜索 | 基于语义理解的搜索引擎</p>
+        </footer>
+    </div>
+    
+    <script src="meditation-search.js"></script>
+</body>
+</html>
